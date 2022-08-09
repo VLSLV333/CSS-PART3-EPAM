@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *,
+        *:before,
+        *:after{
+            box-sizing: border-box;
+        }
+        button{
+            border: none;
+            background: none;
+            cursor: pointer;
+        }
+        video{
+            max-width: 100%;
+            height: auto;
+        }
+        .video-wrapper{
+            position: relative;
+            outline: 2px solid red;
+            display: flex;
+            /* прибираємо білий пробіл знизу abo display: flex*/
+            
+        }
+        .play-button{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            top: calc(50% - 50px);
+            left: calc(50% - 50px);
+            background-color: blue;
+            border-radius: 50%;
+
+        }
+        .play-button::after{
+            content: " ";
+            border-left: 32px solid white;
+            border-top:  16px solid transparent;
+            border-bottom: 16px solid transparent;
+        }
+    </style>
+</head>
+<body>
+    <div class="video-wrapper">
+        <video src="https://frontend-basic.github.io/media/video.mp4"
+         class="js-video" muted></video>
+    
+    <button class="play-button js-play-button" aria-label="play"></button>
+    <!-- aria-label = озвучиться скрін рідером -->
+</div>
+<script>
+    const video = document.querySelector(".js-video");
+    const button = document.querySelector(".js-play-button");
+
+    button.addEventListener("click", function(){
+        button.style.display = "none";
+        video.play();
+    })
+</script>
+</body>
+</html>

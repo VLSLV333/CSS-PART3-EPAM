@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<form action="" > <!--кнопка відправляє заповнену форму, в полі екшн ми обираємо куди саме. зазвичай це сервер.  поле "name" показує яке називається поле, яке заповнили якщо поля нейм немає, сервер не отримає інформацію з форми-->
+    <div>
+        <label for="first-name">First Name</label>
+        <input type="text" name="first_name" id="first-name" value="V"></input>
+    </div>
+    <div>
+        <label for="last-name">Last Name</label>
+        <input type="text" name="last_name" id="last-name" required placeholder="last name"></input>
+    </div>
+    <div>
+        <label for="">Age <input type="number" min="0" max="10"></label>
+    </div>
+    <!-- <div>
+        <label for="">Date <input type="date"></label>
+    </div> -->
+    <br>
+    <fieldset>
+        <legend>Languages</legend> <!--в чекбоксах обов*язково потрібно вказувати поле "велью", щоб сервер отримував значення, які були обрані.-->
+        <label for="english">English</label>
+        <input type="checkbox" value="english" name="languages" id="english">
+        <label for="spanish">Spanish</label>
+        <input type="checkbox" value="spanish" name="languages" id="spanish">
+    </fieldset>
+    <button type="submit">Submit</button>
+</form>    
+
+
+</body>
+</html>
