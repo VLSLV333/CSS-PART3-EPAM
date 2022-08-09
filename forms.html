@@ -17,7 +17,10 @@
         <input type="text" name="last_name" id="last-name" required placeholder="last name"></input>
     </div>
     <div>
-        <label for="">Age <input type="number" min="0" max="10"></label>
+        <label for="">Age <input type="number" step="5" min="0" max="10"></label>
+    </div>
+    <div>
+        <label for="">Зручно набираємо цифри <input type="tel"></label>
     </div>
     <!-- <div>
         <label for="">Date <input type="date"></label>
@@ -25,12 +28,28 @@
     <br>
     <fieldset>
         <legend>Languages</legend> <!--в чекбоксах обов*язково потрібно вказувати поле "велью", щоб сервер отримував значення, які були обрані.-->
-        <label for="english">English</label>
-        <input type="checkbox" value="english" name="languages" id="english">
-        <label for="spanish">Spanish</label>
-        <input type="checkbox" value="spanish" name="languages" id="spanish">
+        <ul>
+            <li>
+                <label for="english">English</label>
+                <input type="checkbox" value="english" name="languages" id="english">
+            </li>
+            <li>
+                <label for="spanish">Spanish</label>
+                <input type="checkbox" value="spanish" name="languages" id="spanish">
+            </li>
+        </ul>
     </fieldset>
+    <label for="sex">Choose</label>
+    <select name="sex" id="sex">
+        <option value="male">Male</option>
+        <option value="female">Female</option>
+    </select>
+    <br>
+    <input type="file">
+    <br>
+    <button type="button"></button> <!--кнопка для джави-->
     <button type="submit">Submit</button>
+    <button type="reset">Reset</button>
 </form>    
 
 
